@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { BUILTIN_PHOTOS } from "./photos";
 
 const ROUTE_COLORS = ["#2563EB","#7C3AED","#059669","#D97706"];
-const ROUTE_EMOJIS = ["🚗","🚙","🚛","🏎️"];
+const ROUTE_EMOJIS = ["🚗","🚙","🚛","🏎️","🚙"];
 const CITY = "קריית גת";
 
 const DEFAULT_ADDRESSES = [
@@ -136,7 +136,7 @@ function PickCarsScreen() {
       <h1 style={{ fontWeight:800,fontSize:24,color:"#111827",margin:"0 0 6px",textAlign:"center" }}>גמ״ח חלוקה שבועית</h1>
       <p style={{ color:"#6b7280",fontSize:15,marginBottom:36,textAlign:"center" }}>כמה רכבים חולקים השבוע?</p>
       <div style={{ display:"flex",flexDirection:"column",gap:14,width:"100%",maxWidth:300 }}>
-        {[2,3,4].map((n,i)=>(
+        {[2,3,4,5].map((n,i)=>(
           <button key={n} onClick={()=>navigate(`/${n}cars/pick`)} style={{
             padding:"18px 0",borderRadius:16,border:"none",
             background:BG[i],color:"#fff",fontWeight:700,fontSize:18,cursor:"pointer",
